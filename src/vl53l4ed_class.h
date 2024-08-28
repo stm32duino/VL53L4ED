@@ -135,7 +135,7 @@ class VL53L4ED {
 
       status = VL53L4ED_GetSensorId(&sensor_id);
 
-      if (status != VL53L4ED_ERROR_NONE && (sensor_id != 0xecaa)) {
+      if (status != VL53L4ED_ERROR_NONE || (sensor_id != 0xecaa)) {
 
         return VL53L4ED_ERROR_TIMEOUT;
       }
